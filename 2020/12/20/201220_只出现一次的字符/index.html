@@ -23,28 +23,34 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mev">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="数组中只有一个单个元素，其他元素成对，找到只出现一次的元素  成对出现，异或 ^，O（N） 成对连续出现，根据奇偶性二分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="只出现一次的字符">
+<meta property="og:url" content="http://example.com/2020/12/20/201220_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Mev">
+<meta property="og:description" content="数组中只有一个单个元素，其他元素成对，找到只出现一次的元素  成对出现，异或 ^，O（N） 成对连续出现，根据奇偶性二分">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-20T06:17:46.000Z">
+<meta property="article:modified_time" content="2020-12-20T15:15:41.959Z">
 <meta property="article:author" content="KatDog">
+<meta property="article:tag" content="快手">
+<meta property="article:tag" content="头条">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/12/20/201220_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>Mev</title>
+<title>只出现一次的字符 | Mev</title>
   
 
 
@@ -237,110 +243,10 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/20/201220_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/katdog.jpg">
-      <meta itemprop="name" content="KatDog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mev">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/20/201220_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/" class="post-title-link" itemprop="url">柱状图中的最大矩形</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-12-20 22:52:07 / 修改时间：23:07:59" itemprop="dateCreated datePublished" datetime="2020-12-20T22:52:07+08:00">2020-12-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CODING/" itemprop="url" rel="index"><span itemprop="name">CODING</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CODING/%E5%8D%95%E8%B0%83%E6%A0%88/" itemprop="url" rel="index"><span itemprop="name">单调栈</span></a>
-        </span>
-    </span>
 
   
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。<br>输入:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;0&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>输出: 6 </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/20/201220_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
 
 
 <div class="post-block">
@@ -360,9 +266,9 @@
       <meta itemprop="name" content="Mev">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/20/201220_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" class="post-title-link" itemprop="url">只出现一次的字符</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          只出现一次的字符
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -413,20 +319,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>数组中只有一个单个元素，其他元素成对，找到只出现一次的元素</p>
+        <p>数组中只有一个单个元素，其他元素成对，找到只出现一次的元素</p>
 <ul>
 <li>成对出现，异或 ^，O（N）</li>
 <li>成对连续出现，根据奇偶性二分</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/20/201220_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bs</span>(<span class="params">arr</span>):</span></span><br><span class="line">    left, right = <span class="number">0</span>, <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> mid - <span class="number">1</span> &gt;= left <span class="keyword">and</span> mid + <span class="number">1</span> &lt;= right <span class="keyword">and</span> arr[mid] != arr[mid - <span class="number">1</span>] <span class="keyword">and</span> arr[mid] != arr[mid + <span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> mid, arr[mid]</span><br><span class="line">        <span class="keyword">elif</span> mid + <span class="number">1</span> &lt;= right <span class="keyword">and</span> arr[mid] == arr[mid + <span class="number">1</span>]:</span><br><span class="line">            length = mid + <span class="number">1</span> - left + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> length % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                right = mid - <span class="number">1</span> <span class="comment"># mid = mid + 1 且为 mid + 1 左边长度为奇数, right -&gt; mid - 1</span></span><br><span class="line">            <span class="keyword">else</span>: </span><br><span class="line">                left = mid + <span class="number">2</span>  <span class="comment"># mid = mid + 1 且为 mid + 1 右边长度为奇数, right -&gt; mid + 2</span></span><br><span class="line">                <span class="comment"># left = mid</span></span><br><span class="line">        <span class="keyword">elif</span> mid - <span class="number">1</span> &gt;= left <span class="keyword">and</span> arr[mid] == arr[mid - <span class="number">1</span>]:</span><br><span class="line">            length = mid - left + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> length % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                right = mid - <span class="number">2</span> <span class="comment"># mid - 1 = mid 且为 mid 左边长度为奇数, right -&gt; mid -2</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span> <span class="comment"># mid - 1 = mid 且为mid 右边长度为奇数, right -&gt; mid + 1</span></span><br><span class="line">    <span class="comment"># left = right</span></span><br><span class="line">    <span class="comment"># 【1，2，2】&amp;nbs***bsp;【1，1，2】的情况</span></span><br><span class="line">    <span class="keyword">return</span> left, arr[left]</span><br><span class="line"> </span><br><span class="line">arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">5</span>]</span><br><span class="line">print(bs(arr))</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -434,11 +333,26 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E5%BF%AB%E6%89%8B/" rel="tag"># 快手</a>
+              <a href="/tags/%E5%A4%B4%E6%9D%A1/" rel="tag"># 头条</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/20/201220_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/" rel="next" title="柱状图中的最大矩形">
+                  柱状图中的最大矩形 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
