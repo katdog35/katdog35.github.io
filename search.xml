@@ -151,20 +151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二叉树镜像</title>
-    <url>/2020/12/23/20-12-23_%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/</url>
-    <content><![CDATA[<p>完成一个函数，输入一个二叉树，该函数输出它的镜像。<br>例如输入：<br>   4<br>  / \<br>  2  7<br> / \ / \<br> 1 3 6 9<br>镜像输出：<br>  4<br> / \<br> 7  2<br>/ \ / \<br>9 6 3 1 </p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mirrorTree1</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 递归</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    root.left, root.right = root.right, root.left</span><br><span class="line">    mirrorTree1(root.left)</span><br><span class="line">    mirrorTree1(root.right)</span><br><span class="line">    <span class="keyword">return</span> root</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mirrorTree2</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 非递归</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    queue = []</span><br><span class="line">    queue.append(root)</span><br><span class="line">    <span class="keyword">while</span> queue:</span><br><span class="line">        cur = queue.pop(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span> cur.left:</span><br><span class="line">            queue.append(cur.left)</span><br><span class="line">        <span class="keyword">if</span> cur.right:</span><br><span class="line">            queue.append(cur.right)</span><br><span class="line">        cur.left, cur.right = cur.right, cur.left</span><br><span class="line">    <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CODING</category>
-        <category>树</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>滑动窗口最大值</title>
     <url>/2020/12/22/20-12-22_%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/</url>
     <content><![CDATA[<p>给定一个数组 nums 和滑动窗口的大小 k，请找出所有滑动窗口里的最大值<br>示例:<br>输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3<br>输出: [3,3,5,5,6,7]<br>解释:<br>    [1  3  -1] -3  5  3  6  7   =&gt; 3<br>    1 [3  -1  -3] 5  3  6  7    =&gt; 3<br>    1  3 [-1  -3  5] 3  6  7    =&gt; 5<br>    1  3  -1 [-3  5  3] 6  7    =&gt; 5<br>    1  3  -1  -3 [5  3  6] 7    =&gt; 6<br>    1  3  -1  -3  5 [3  6  7]   =&gt; 7<br>提示：你可以假设 k 总是有效的，在输入数组不为空的情况下，1 ≤ k ≤ 输入数组的大小</p>
@@ -178,6 +164,20 @@
       </categories>
       <tags>
         <tag>头条</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树镜像</title>
+    <url>/2020/12/23/20-12-23_%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F/</url>
+    <content><![CDATA[<p>完成一个函数，输入一个二叉树，该函数输出它的镜像。<br>例如输入：<br>   4<br>  / \<br>  2  7<br> / \ / \<br> 1 3 6 9<br>镜像输出：<br>  4<br> / \<br> 7  2<br>/ \ / \<br>9 6 3 1 </p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mirrorTree1</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 递归</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    root.left, root.right = root.right, root.left</span><br><span class="line">    mirrorTree1(root.left)</span><br><span class="line">    mirrorTree1(root.right)</span><br><span class="line">    <span class="keyword">return</span> root</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mirrorTree2</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 非递归</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    queue = []</span><br><span class="line">    queue.append(root)</span><br><span class="line">    <span class="keyword">while</span> queue:</span><br><span class="line">        cur = queue.pop(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span> cur.left:</span><br><span class="line">            queue.append(cur.left)</span><br><span class="line">        <span class="keyword">if</span> cur.right:</span><br><span class="line">            queue.append(cur.right)</span><br><span class="line">        cur.left, cur.right = cur.right, cur.left</span><br><span class="line">    <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CODING</category>
+        <category>树</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
       </tags>
   </entry>
   <entry>
