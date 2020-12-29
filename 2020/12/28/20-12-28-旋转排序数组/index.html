@@ -23,21 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积输入: 123456[    [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],    [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&amp;q">
+<meta name="description" content="假设按照升序排序的数组在预先未知的某个点上进行了旋转。 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2]，注意数组中可能存在重复的元素。   找出其中最小的元素 找出指定的元素target，若不存在返回-1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="柱状图中的最大矩形">
-<meta property="og:url" content="http://example.com/2020/12/20/20-12-20_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/index.html">
+<meta property="og:title" content="旋转排序数组">
+<meta property="og:url" content="http://example.com/2020/12/28/20-12-28-%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Mev">
-<meta property="og:description" content="给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积输入: 123456[    [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],    [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&amp;q">
+<meta property="og:description" content="假设按照升序排序的数组在预先未知的某个点上进行了旋转。 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2]，注意数组中可能存在重复的元素。   找出其中最小的元素 找出指定的元素target，若不存在返回-1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-20T14:52:07.000Z">
-<meta property="article:modified_time" content="2020-12-23T06:56:46.567Z">
+<meta property="article:published_time" content="2020-12-28T06:01:44.000Z">
+<meta property="article:modified_time" content="2020-12-28T08:00:26.135Z">
 <meta property="article:author" content="KatDog">
-<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="快手">
+<meta property="article:tag" content="好未来">
+<meta property="article:tag" content="滴滴">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2020/12/20/20-12-20_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/">
+<link rel="canonical" href="http://example.com/2020/12/28/20-12-28-%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/">
 
 
 <script class="page-configurations">
@@ -49,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>柱状图中的最大矩形 | Mev</title>
+<title>旋转排序数组 | Mev</title>
   
 
 
@@ -253,7 +255,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/20/20-12-20_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/28/20-12-28-%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/katdog.jpg">
@@ -266,7 +268,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          柱状图中的最大矩形
+          旋转排序数组
         </h1>
 
         <div class="post-meta-container">
@@ -276,16 +278,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-12-20 22:52:07" itemprop="dateCreated datePublished" datetime="2020-12-20T22:52:07+08:00">2020-12-20</time>
+      <time title="创建时间：2020-12-28 14:01:44 / 修改时间：16:00:26" itemprop="dateCreated datePublished" datetime="2020-12-28T14:01:44+08:00">2020-12-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-23 14:56:46" itemprop="dateModified" datetime="2020-12-23T14:56:46+08:00">2020-12-23</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -296,7 +292,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CODING/%E5%8D%95%E8%B0%83%E6%A0%88/" itemprop="url" rel="index"><span itemprop="name">单调栈</span></a>
+          <a href="/categories/CODING/dp/" itemprop="url" rel="index"><span itemprop="name">dp</span></a>
         </span>
     </span>
 
@@ -306,7 +302,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>841</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -324,14 +320,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积<br>输入:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;0&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;1&quot;</span>],</span><br><span class="line">    [<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;0&quot;</span>,<span class="string">&quot;1&quot;</span>,<span class="string">&quot;0&quot;</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>输出: 6 </p>
+        <p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2]，注意数组中可能存在重复的元素。 </p>
+<ul>
+<li>找出其中最小的元素</li>
+<li>找出指定的元素target，若不存在返回-1</li>
+</ul>
 <a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findMin</span>(<span class="params">nums</span>) -&gt; int:</span></span><br><span class="line">    left, right = <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt; right: <span class="comment"># 终止条件 left=right</span></span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &gt; nums[right]:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; nums[right]:</span><br><span class="line">            right = mid</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> nums[left] <span class="comment"># or nums[right]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findTarget</span>(<span class="params">nums, target</span>) -&gt; int:</span></span><br><span class="line">    left, right = <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &gt; nums[left]:</span><br><span class="line">            <span class="comment"># [left, mid) 有序</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] &lt;= target <span class="keyword">and</span> target &lt;= nums[mid]:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; nums[left]:</span><br><span class="line">            <span class="comment"># [left, mid) 不递增 [7,6,5,1,2,3]</span></span><br><span class="line">            <span class="keyword">if</span> target &gt;= nums[left] <span class="keyword">or</span> target &lt;= nums[mid]:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> nums[mid] == nums[left]:</span><br><span class="line">            <span class="comment"># [8,1,2,8,8]</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] == target:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> left <span class="keyword">if</span> nums[left] == target <span class="keyword">else</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">largestRectangleArea2</span>(<span class="params">self, heights</span>) -&gt; int:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    暴力法 O(N^2), 以 heights[i] 的高度为高，求左右满足的宽</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    lg = <span class="built_in">len</span>(heights)</span><br><span class="line">    maxx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(lg):</span><br><span class="line">        tmp = heights[i]</span><br><span class="line">        left, right = i, i</span><br><span class="line">        <span class="keyword">while</span> left &gt; <span class="number">0</span> <span class="keyword">and</span> heights[left - <span class="number">1</span>] &gt;= heights[i]:</span><br><span class="line">            left -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> right &lt; lg - <span class="number">1</span> <span class="keyword">and</span> heights[right + <span class="number">1</span>] &gt;= heights[i]:</span><br><span class="line">            right += <span class="number">1</span></span><br><span class="line">        maxx = <span class="built_in">max</span>(tmp * (right - left + <span class="number">1</span>), maxx)</span><br><span class="line">    <span class="keyword">return</span> maxx</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">largestRectangleArea</span>(<span class="params">heights</span>) -&gt; int:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    单调栈, stack 递增</span></span><br><span class="line"><span class="string">    cur 比 stack[-1]大，入栈; </span></span><br><span class="line"><span class="string">    cur 比 stack[-1]小，依次出栈至 stack[-1]小于cur</span></span><br><span class="line"><span class="string">    以出栈元素的值为高，求宽，更新最值</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    heights.append(<span class="number">0</span>) <span class="comment"># 判断最后一个元素为高的情况</span></span><br><span class="line">    lg = <span class="built_in">len</span>(heights)</span><br><span class="line">    stack = [<span class="number">0</span>]</span><br><span class="line">    maxx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, lg):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">and</span> heights[stack[-<span class="number">1</span>]] &lt;= heights[i]:</span><br><span class="line">            stack.append(i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">while</span> stack <span class="keyword">and</span> heights[stack[-<span class="number">1</span>]] &gt;= heights[i]:</span><br><span class="line">                h = heights[stack[-<span class="number">1</span>]]</span><br><span class="line">                stack.pop()</span><br><span class="line">                <span class="comment"># stack 为空，说明当前height[i] 小于 i之前所有的值</span></span><br><span class="line">                 </span><br><span class="line">                w = i <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">else</span> i - (stack[-<span class="number">1</span>] + <span class="number">1</span>)</span><br><span class="line">                maxx = <span class="built_in">max</span>(maxx, h*w)</span><br><span class="line">            stack.append(i)</span><br><span class="line">    <span class="keyword">return</span> maxx</span><br><span class="line"><span class="comment"># i=3 结束时，stack = [0,3]；i=4, height[4]=0时，w = i - (0 + 1) = 3</span></span><br><span class="line">heights = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>] </span><br><span class="line">print(largestRectangleArea(heights))</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -340,20 +337,22 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E5%BF%AB%E6%89%8B/" rel="tag"># 快手</a>
+              <a href="/tags/%E5%A5%BD%E6%9C%AA%E6%9D%A5/" rel="tag"># 好未来</a>
+              <a href="/tags/%E6%BB%B4%E6%BB%B4/" rel="tag"># 滴滴</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/12/20/20-12-20_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" rel="prev" title="只出现一次的字符">
-                  <i class="fa fa-chevron-left"></i> 只出现一次的字符
+                <a href="/2020/12/25/20-12-25_%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86/" rel="prev" title="分割等和子集">
+                  <i class="fa fa-chevron-left"></i> 分割等和子集
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/12/22/20-12-22_%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/" rel="next" title="滑动窗口最大值">
-                  滑动窗口最大值 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/12/28/20-12-28-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/" rel="next" title="正则表达式匹配">
+                  正则表达式匹配 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
