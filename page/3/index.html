@@ -25,26 +25,26 @@
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mev">
-<meta property="og:url" content="http://example.com/archives/2020/10/index.html">
+<meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="Mev">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="KatDog">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/2020/10/">
+<link rel="canonical" href="http://example.com/page/3/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
+    isHome : true,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
-<title>归档 | Mev</title>
+<title>Mev</title>
   
 
 
@@ -237,49 +237,116 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 21 篇日志。 继续努力。</span>
-      </div>
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/25/20-08-25_%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%BA%8F%E6%8B%86%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/katdog.jpg">
+      <meta itemprop="name" content="KatDog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mev">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/08/25/20-08-25_%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%BA%8F%E6%8B%86%E5%88%86/" class="post-title-link" itemprop="url">数组的有序拆分</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-25 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-25T00:00:00+08:00">2020-08-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-24 17:06:13" itemprop="dateModified" datetime="2020-12-24T17:06:13+08:00">2020-12-24</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CODING/" itemprop="url" rel="index"><span itemprop="name">CODING</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CODING/%E5%8F%8C%E6%8C%87%E9%92%88/" itemprop="url" rel="index"><span itemprop="name">双指针</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>440</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>实现一个数组的有序拆分<br>给定一个浮点数组及 2个阀值l 和 h，l &lt; h<br>对数组排序满足，数组左边均小于l，右边均大于h，中间部分在[l, h]之间<br>时间复杂度O(N), 额外空间复杂度O(1)</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/25/20-08-25_%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%BA%8F%E6%8B%86%E5%88%86/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-22T15:54:41+08:00"
-              content="2020-10-22">
-          10-22
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/22/20-10-22_%E5%88%A0%E9%99%A4k%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BD%BF%E6%95%B4%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F/" itemprop="url">
-            <span itemprop="name">删除k个元素使整型字符串最小</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 
 
 <script>
