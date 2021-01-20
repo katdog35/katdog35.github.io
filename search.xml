@@ -438,4 +438,15 @@
         <category>树</category>
       </categories>
   </entry>
+  <entry>
+    <title>括号生成</title>
+    <url>/2021/01/20/21-01-20_%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90/</url>
+    <content><![CDATA[<p>数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合<br>输入：n = 3, 输出：[“((()))”,  “(()())”,  “(())()”,  “()(())”,  “()()()” ]</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generateParenthesis</span>(<span class="params">n: <span class="built_in">int</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">left, right, res, track</span>):</span></span><br><span class="line">        <span class="keyword">if</span> right &lt; left:</span><br><span class="line">            <span class="keyword">return</span> </span><br><span class="line">        <span class="keyword">elif</span> left &lt; <span class="number">0</span> <span class="keyword">or</span> right &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">elif</span> left == <span class="number">0</span> <span class="keyword">and</span> right == <span class="number">0</span>:</span><br><span class="line">            res.append(track[:])</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">        track += <span class="string">&#x27;(&#x27;</span></span><br><span class="line">        backtrack(left - <span class="number">1</span>, right, res, track)</span><br><span class="line">        track = track[:-<span class="number">1</span>] <span class="comment"># list.pop()</span></span><br><span class="line">        </span><br><span class="line">        track += <span class="string">&#x27;)&#x27;</span></span><br><span class="line">        backtrack(left, right - <span class="number">1</span>, res, track)</span><br><span class="line">        track = track[:-<span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    res = []</span><br><span class="line">    track = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    backtrack(n, n, res, track)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">n = <span class="number">2</span></span><br><span class="line">print(generateParenthesis(n))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CODING</category>
+        <category>dfs</category>
+      </categories>
+  </entry>
 </search>
