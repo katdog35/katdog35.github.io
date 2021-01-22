@@ -193,7 +193,7 @@
     <url>/2020/12/24/20-12-24_%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/</url>
     <content><![CDATA[<p>输入一棵二叉树和一个整数，打印出二叉树中节点值的和为输入整数的所有路径。从树的根节点开始往下一直到叶节点所经过的节点形成一条路径</p>
 <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pathSum</span>(<span class="params">root, summ: <span class="built_in">int</span></span>):</span></span><br><span class="line">    res, path = [], []</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">root, target</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        path.append(root.val)</span><br><span class="line">        target -= root.val</span><br><span class="line">        <span class="comment"># 如果满足条件【路径，且 和等于target】</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root.left <span class="keyword">and</span> <span class="keyword">not</span> root.right <span class="keyword">and</span> <span class="built_in">sum</span>(path) == target:</span><br><span class="line">            res.append(path[:]) <span class="comment"># copy, 否则后面改变会影响前面的值</span></span><br><span class="line">        <span class="comment"># 不满足条件，递归</span></span><br><span class="line">        <span class="keyword">if</span> root.left:</span><br><span class="line">            recur(root.left, target)</span><br><span class="line">        <span class="keyword">if</span> root.right:</span><br><span class="line">            recur(root.right, target)</span><br><span class="line">        path.pop()</span><br><span class="line">    recur(root, summ)</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pathSum</span>(<span class="params">root, summ: <span class="built_in">int</span></span>):</span></span><br><span class="line">    res, path = [], []</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">root, target</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        path.append(root.val)</span><br><span class="line">        target -= root.val</span><br><span class="line">        <span class="comment"># 如果满足条件【路径，且 和等于target】</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root.left <span class="keyword">and</span> <span class="keyword">not</span> root.right <span class="keyword">and</span> target == <span class="number">0</span>:</span><br><span class="line">            res.append(path[:]) <span class="comment"># copy, 否则后面改变会影响前面的值</span></span><br><span class="line">        <span class="comment"># 不满足条件，递归</span></span><br><span class="line">        <span class="keyword">if</span> root.left:</span><br><span class="line">            recur(root.left, target)</span><br><span class="line">        <span class="keyword">if</span> root.right:</span><br><span class="line">            recur(root.right, target)</span><br><span class="line">        path.pop()</span><br><span class="line">    recur(root, summ)</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>CODING</category>
         <category>dfs</category>
@@ -447,6 +447,21 @@
       <categories>
         <category>CODING</category>
         <category>dfs</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>贺炜语录</title>
+    <url>/2021/01/22/21-01-22_%E8%B4%BA%E7%82%9C%E8%AF%AD%E5%BD%95/</url>
+    <content><![CDATA[<p>生活不可能像你想象得那么好,但也不会像你想象得那么糟。人的脆弱和坚强都超乎自己的想象。有时,我可能脆弱得一句话就泪流满面,有时,也发现自己咬着牙走了很长的路。</p>
+<p>人生当中成功只是一时的，失败却是主旋律，但是如何面对失败却把人分成了不同的样子。有的人会被失败击垮，有的人会不断爬起来继续向前，澳大利亚队是如此，西班牙队也是如此。我想真正的成熟应该并不是追求完美，而是直面自己的缺憾，这才是生活的本质。罗曼-罗兰说过：“这个世界上只有一种真正的英雄主义，那就是认清生活的真相并且仍然热爱它。”</p>
+<p>胜不妄喜,败不惶馁,胸有激雷而面如平湖者,可拜上将军。</p>
+<p>94年的时候，我还是个中学生，听到马拉多纳禁赛的消息，我当时认为马拉多纳有一天还会回来的。但是，生活当中往往就是这样，一件不经意的小事，经常就是命运的转折，一次看似普通的再见，其实就是永别！缘分就在那一个瞬间戛然而止。</p>
+<p>爱本身并没有错，爱谁都是自由，爱强者更是人类的天性。不过因为自己所爱的事物强大，就幻想自己也强大了，甚至觉得爱其他事物的人都已经被踩在脚下了，这就是病态，一种弱者的病态。此道理，适合所有人。</p>
+<p>人的一生中最光辉的一天，并非是功成名就那天，而是从悲叹与绝望中产生对人生的挑战、以勇敢迈向意志那天。我们也以这句福楼拜的名言，送别即将离去的法国队，希望法国队重拾勇气，重振辉煌！</p>
+]]></content>
+      <categories>
+        <category>文学</category>
+        <category>贺炜</category>
       </categories>
   </entry>
 </search>
