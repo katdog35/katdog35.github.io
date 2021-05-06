@@ -17,19 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title>删除k个元素使整型字符串最小</title>
-    <url>/2020/10/22/20-10-22_%E5%88%A0%E9%99%A4k%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BD%BF%E6%95%B4%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F/</url>
-    <content><![CDATA[<p>给定一个整型string，删除k个元素后，使int(string)最小<br>例如，string=”32124”，k=2，输出 124；k=3，输出12</p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_min_val</span>(<span class="params">str_nums, k</span>):</span></span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(str_nums)</span><br><span class="line">    <span class="keyword">while</span> k &gt; <span class="number">0</span>:</span><br><span class="line">        cur = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> cur &lt; <span class="built_in">len</span>(str_nums) - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> str_nums[cur] &gt; str_nums[cur + <span class="number">1</span>]:</span><br><span class="line">                str_nums = str_nums[:cur] + str_nums[cur + <span class="number">1</span>:]</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cur += <span class="number">1</span></span><br><span class="line">        str_nums = str_nums[:-<span class="number">1</span>] <span class="keyword">if</span> cur == <span class="built_in">len</span>(str_nums) - <span class="number">1</span> <span class="keyword">else</span> str_nums</span><br><span class="line">        k -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(str_nums)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">str_nums = <span class="string">&#x27;32513479&#x27;</span></span><br><span class="line">k = <span class="number">2</span></span><br><span class="line">print(get_min_val(str_nums, k))</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-      </categories>
-      <tags>
-        <tag>百度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>只出现一次的字符</title>
     <url>/2020/12/20/20-12-20_%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/</url>
     <content><![CDATA[<p>数组中只有一个单个元素，其他元素成对，找到只出现一次的元素</p>
@@ -49,6 +36,19 @@
       </tags>
   </entry>
   <entry>
+    <title>删除k个元素使整型字符串最小</title>
+    <url>/2020/10/22/20-10-22_%E5%88%A0%E9%99%A4k%E4%B8%AA%E5%85%83%E7%B4%A0%E4%BD%BF%E6%95%B4%E5%9E%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%B0%8F/</url>
+    <content><![CDATA[<p>给定一个整型string，删除k个元素后，使int(string)最小<br>例如，string=”32124”，k=2，输出 124；k=3，输出12</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_min_val</span>(<span class="params">str_nums, k</span>):</span></span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(str_nums)</span><br><span class="line">    <span class="keyword">while</span> k &gt; <span class="number">0</span>:</span><br><span class="line">        cur = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> cur &lt; <span class="built_in">len</span>(str_nums) - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> str_nums[cur] &gt; str_nums[cur + <span class="number">1</span>]:</span><br><span class="line">                str_nums = str_nums[:cur] + str_nums[cur + <span class="number">1</span>:]</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cur += <span class="number">1</span></span><br><span class="line">        str_nums = str_nums[:-<span class="number">1</span>] <span class="keyword">if</span> cur == <span class="built_in">len</span>(str_nums) - <span class="number">1</span> <span class="keyword">else</span> str_nums</span><br><span class="line">        k -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>(str_nums)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">str_nums = <span class="string">&#x27;32513479&#x27;</span></span><br><span class="line">k = <span class="number">2</span></span><br><span class="line">print(get_min_val(str_nums, k))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+      </categories>
+      <tags>
+        <tag>百度</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>柱状图中的最大矩形</title>
     <url>/2020/12/20/20-12-20_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/</url>
     <content><![CDATA[<p>给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积<br>输入:</p>
@@ -65,21 +65,6 @@
       </categories>
       <tags>
         <tag>单调栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二叉树的直径</title>
-    <url>/2020/12/23/20-12-22_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/</url>
-    <content><![CDATA[<p>给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点<br>示例 :<br>给定二叉树<br>            1<br>          / <br>         2   3<br>        / \<br>       4   5<br>返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]</p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">diameterOfBinaryTree</span>(<span class="params">root</span>) -&gt; int:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">root</span>):</span></span><br><span class="line">        <span class="comment"># 返回: 以root 为根结点的最长路径的最大节点个数</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="comment"># focus on one node</span></span><br><span class="line">        left = dfs(root.left)</span><br><span class="line">        right = dfs(root.right)</span><br><span class="line">        <span class="keyword">global</span> node_nums</span><br><span class="line">        node_nums = <span class="built_in">max</span>(node_nums, left + right + <span class="number">1</span>)</span><br><span class="line">        <span class="comment"># 左右子树只能贡献一边，向上递归</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(left, right) + <span class="number">1</span> </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">global</span> node_nums</span><br><span class="line">    node_nums = <span class="number">1</span></span><br><span class="line">    dfs(root)</span><br><span class="line">    <span class="keyword">return</span> node_nums - <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-        <category>回溯_dfs</category>
-        <category>树</category>
-      </categories>
-      <tags>
-        <tag>头条</tag>
       </tags>
   </entry>
   <entry>
@@ -105,6 +90,21 @@
         <tag>快手</tag>
         <tag>好未来</tag>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树的直径</title>
+    <url>/2020/12/23/20-12-22_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/</url>
+    <content><![CDATA[<p>给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点<br>示例 :<br>给定二叉树<br>            1<br>          / <br>         2   3<br>        / \<br>       4   5<br>返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">diameterOfBinaryTree</span>(<span class="params">root</span>) -&gt; int:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">root</span>):</span></span><br><span class="line">        <span class="comment"># 返回: 以root 为根结点的最长路径的最大节点个数</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="comment"># focus on one node</span></span><br><span class="line">        left = dfs(root.left)</span><br><span class="line">        right = dfs(root.right)</span><br><span class="line">        <span class="keyword">global</span> node_nums</span><br><span class="line">        node_nums = <span class="built_in">max</span>(node_nums, left + right + <span class="number">1</span>)</span><br><span class="line">        <span class="comment"># 左右子树只能贡献一边，向上递归</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(left, right) + <span class="number">1</span> </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">global</span> node_nums</span><br><span class="line">    node_nums = <span class="number">1</span></span><br><span class="line">    dfs(root)</span><br><span class="line">    <span class="keyword">return</span> node_nums - <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+        <category>回溯_dfs</category>
+        <category>树</category>
+      </categories>
+      <tags>
+        <tag>头条</tag>
       </tags>
   </entry>
   <entry>
@@ -314,6 +314,20 @@
       </tags>
   </entry>
   <entry>
+    <title>上凸函数采样点找最大值</title>
+    <url>/2021/01/05/21-01-05_%E4%B8%8A%E5%87%B8%E5%87%BD%E6%95%B0%E9%87%87%E6%A0%B7%E7%82%B9%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/</url>
+    <content><![CDATA[<p>给定上凸函数采样点数组，例如[-1, 5, 8, 9, 10, 8, 5, 3, 2, 1]，找最大值<br>注：有序数组旋转后，后半部分倒序同样为上凸函数采样点 [5, 6, 7, 8, 1, 2, 3, 4] -&gt; [5, 6, 7, 8, 4, 3, 2, 1]</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_maxx_from_convex_sample</span>(<span class="params">arr</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> arr:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    left, right = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> mid - <span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> mid + <span class="number">1</span> &lt;= <span class="built_in">len</span>(arr) - <span class="number">1</span> <span class="keyword">and</span> arr[mid - <span class="number">1</span>] &lt; arr[mid] <span class="keyword">and</span> arr[mid] &gt; arr[mid + <span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> arr[mid]</span><br><span class="line">        <span class="keyword">elif</span> mid - <span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> arr[mid - <span class="number">1</span>] &lt; arr[mid]:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> mid + <span class="number">1</span> &lt;= <span class="built_in">len</span>(arr) - <span class="number">1</span> <span class="keyword">and</span> arr[mid] &gt; arr[mid + <span class="number">1</span>]:</span><br><span class="line">            right = mid</span><br><span class="line">    <span class="keyword">return</span> arr[left]</span><br><span class="line"></span><br><span class="line">arr = [-<span class="number">1</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">print(get_maxx_from_convex_sample(arr))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+        <category>二分</category>
+      </categories>
+      <tags>
+        <tag>阿里</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串消除连续出现的字符</title>
     <url>/2021/01/08/21-01-08_%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B6%88%E9%99%A4%E8%BF%9E%E7%BB%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E5%AD%97%E7%AC%A6/</url>
     <content><![CDATA[<p>给你一个字符串 s，「k 倍重复项删除操作」将会从 s 中选择 k 个相邻且相等的字母，并删除它们，使被删去的字符串的左侧和右侧连在一起。 你需要对 s 重复进行无限次这样的删除操作，直到无法继续为止。 在执行完所有删除操作后，返回最终得到的字符串。本题答案保证唯一。 </p>
@@ -328,20 +342,6 @@
       <tags>
         <tag>头条</tag>
         <tag>天眼查</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>上凸函数采样点找最大值</title>
-    <url>/2021/01/05/21-01-05_%E4%B8%8A%E5%87%B8%E5%87%BD%E6%95%B0%E9%87%87%E6%A0%B7%E7%82%B9%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC/</url>
-    <content><![CDATA[<p>给定上凸函数采样点数组，例如[-1, 5, 8, 9, 10, 8, 5, 3, 2, 1]，找最大值<br>注：有序数组旋转后，后半部分倒序同样为上凸函数采样点 [5, 6, 7, 8, 1, 2, 3, 4] -&gt; [5, 6, 7, 8, 4, 3, 2, 1]</p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_maxx_from_convex_sample</span>(<span class="params">arr</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> arr:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">    left, right = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> mid - <span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> mid + <span class="number">1</span> &lt;= <span class="built_in">len</span>(arr) - <span class="number">1</span> <span class="keyword">and</span> arr[mid - <span class="number">1</span>] &lt; arr[mid] <span class="keyword">and</span> arr[mid] &gt; arr[mid + <span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> arr[mid]</span><br><span class="line">        <span class="keyword">elif</span> mid - <span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> arr[mid - <span class="number">1</span>] &lt; arr[mid]:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> mid + <span class="number">1</span> &lt;= <span class="built_in">len</span>(arr) - <span class="number">1</span> <span class="keyword">and</span> arr[mid] &gt; arr[mid + <span class="number">1</span>]:</span><br><span class="line">            right = mid</span><br><span class="line">    <span class="keyword">return</span> arr[left]</span><br><span class="line"></span><br><span class="line">arr = [-<span class="number">1</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">print(get_maxx_from_convex_sample(arr))</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-        <category>二分</category>
-      </categories>
-      <tags>
-        <tag>阿里</tag>
       </tags>
   </entry>
   <entry>
@@ -411,18 +411,6 @@
       </categories>
   </entry>
   <entry>
-    <title>相同的/对称的二叉树</title>
-    <url>/2021/01/20/21-01-20_%E7%9B%B8%E5%90%8C%E7%9A%84_%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
-    <content><![CDATA[<p>相同的树：如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的<br>对称的树：如果一个二叉树同此二叉树的镜像是相同的，定义其为对称的<br> <a id="more"></a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSameTree</span>(<span class="params">p, q</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> p <span class="keyword">and</span> <span class="keyword">not</span> q:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> p <span class="keyword">and</span> q:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> q <span class="keyword">and</span> p:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> p.val != q.val:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> isSameTree(p.left, q.left) <span class="keyword">and</span> isSameTree(p.right, q.right)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSymmetrical</span>(<span class="params">pRoot</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">left, right</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> left <span class="keyword">and</span> <span class="keyword">not</span> right:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> left <span class="keyword">or</span> <span class="keyword">not</span> right:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> left.val != right.val:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> recursive(left.left, right.right) <span class="keyword">and</span> recursive(left.right, right.left)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> pRoot:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> recursive(pRoot.left, pRoot.right)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-        <category>递归</category>
-        <category>树</category>
-        <category>bfs</category>
-      </categories>
-  </entry>
-  <entry>
     <title>二叉树最近公共祖先</title>
     <url>/2021/01/20/21-01-20_%E4%BA%8C%E5%8F%89%E6%A0%91%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</url>
     <content><![CDATA[<p>给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。 最近公共祖先的定义为：对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且x的深度尽可能大（一个节点也可以是它自己的祖先）</p>
@@ -458,6 +446,29 @@
       </categories>
   </entry>
   <entry>
+    <title>相同的/对称的二叉树</title>
+    <url>/2021/01/20/21-01-20_%E7%9B%B8%E5%90%8C%E7%9A%84_%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<p>相同的树：如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的<br>对称的树：如果一个二叉树同此二叉树的镜像是相同的，定义其为对称的<br> <a id="more"></a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSameTree</span>(<span class="params">p, q</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> p <span class="keyword">and</span> <span class="keyword">not</span> q:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> p <span class="keyword">and</span> q:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> q <span class="keyword">and</span> p:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">if</span> p.val != q.val:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> isSameTree(p.left, q.left) <span class="keyword">and</span> isSameTree(p.right, q.right)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSymmetrical</span>(<span class="params">pRoot</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">left, right</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> left <span class="keyword">and</span> <span class="keyword">not</span> right:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> left <span class="keyword">or</span> <span class="keyword">not</span> right:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> left.val != right.val:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> recursive(left.left, right.right) <span class="keyword">and</span> recursive(left.right, right.left)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> pRoot:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> recursive(pRoot.left, pRoot.right)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+        <category>递归</category>
+        <category>树</category>
+        <category>bfs</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>全排列</title>
+    <url>/2021/01/22/21-01-22_%E5%85%A8%E6%8E%92%E5%88%97/</url>
+    <content><![CDATA[<p>输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则按字典序打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。输入描述:输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母。<br>输入: “ab”, 返回值: [“ab”,”ba”]</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Permutation</span>(<span class="params">ss</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">ss, res, track, used</span>):</span></span><br><span class="line">        <span class="comment"># 满足条件，终止</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(track) == <span class="built_in">len</span>(ss):</span><br><span class="line">            res.append(track[:])</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ss)):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> used[i]:</span><br><span class="line">                used[i] = <span class="literal">True</span></span><br><span class="line">                <span class="comment"># 做选择</span></span><br><span class="line">                track += ss[i]</span><br><span class="line">                backtrack(ss, res, track, used)</span><br><span class="line">                used[i] = <span class="literal">False</span></span><br><span class="line">                <span class="comment"># 撤销选择</span></span><br><span class="line">                track = track[:-<span class="number">1</span>]</span><br><span class="line">    res = []</span><br><span class="line">    used = [<span class="literal">False</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ss))]</span><br><span class="line">    backtrack(ss, res, <span class="string">&#x27;&#x27;</span>, used)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sorted</span>(<span class="built_in">set</span>(res))</span><br><span class="line"></span><br><span class="line">ss = <span class="string">&quot;ab&quot;</span></span><br><span class="line">print(Permutation(ss))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+        <category>回溯_dfs</category>
+      </categories>
+  </entry>
+  <entry>
     <title>贺炜语录</title>
     <url>/2021/01/22/21-01-22_%E8%B4%BA%E7%82%9C%E8%AF%AD%E5%BD%95/</url>
     <content><![CDATA[<p>生活不可能像你想象得那么好,但也不会像你想象得那么糟。人的脆弱和坚强都超乎自己的想象。有时,我可能脆弱得一句话就泪流满面,有时,也发现自己咬着牙走了很长的路。</p>
@@ -470,17 +481,6 @@
 ]]></content>
       <categories>
         <category>文学</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>全排列</title>
-    <url>/2021/01/22/21-01-22_%E5%85%A8%E6%8E%92%E5%88%97/</url>
-    <content><![CDATA[<p>输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则按字典序打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。输入描述:输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母。<br>输入: “ab”, 返回值: [“ab”,”ba”]</p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Permutation</span>(<span class="params">ss</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">ss, res, track, used</span>):</span></span><br><span class="line">        <span class="comment"># 满足条件，终止</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(track) == <span class="built_in">len</span>(ss):</span><br><span class="line">            res.append(track[:])</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ss)):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> used[i]:</span><br><span class="line">                used[i] = <span class="literal">True</span></span><br><span class="line">                <span class="comment"># 做选择</span></span><br><span class="line">                track += ss[i]</span><br><span class="line">                backtrack(ss, res, track, used)</span><br><span class="line">                used[i] = <span class="literal">False</span></span><br><span class="line">                <span class="comment"># 撤销选择</span></span><br><span class="line">                track = track[:-<span class="number">1</span>]</span><br><span class="line">    res = []</span><br><span class="line">    used = [<span class="literal">False</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ss))]</span><br><span class="line">    backtrack(ss, res, <span class="string">&#x27;&#x27;</span>, used)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sorted</span>(<span class="built_in">set</span>(res))</span><br><span class="line"></span><br><span class="line">ss = <span class="string">&quot;ab&quot;</span></span><br><span class="line">print(Permutation(ss))</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-        <category>回溯_dfs</category>
       </categories>
   </entry>
   <entry>
